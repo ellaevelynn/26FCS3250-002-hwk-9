@@ -1,10 +1,10 @@
 '''
 CS 3250 - Software Dev. Methods and Tools
 Instructor: Thyago Mota
-Student:
+Student: Isabella Eaton
 Description: Homework 09 - White-box (Unit) Testing
 '''
- 
+
 class Loan: 
     '''
     A class to model a loan with the ability to compute monthly payments, make payments, and query the loan status. 
@@ -42,49 +42,49 @@ class Loan:
         num_payments = self.__years * 12
         monthly_payment = (self.__loan_amount * monthly_interest_rate) / (1 - (1 + monthly_interest_rate) ** -num_payments)
         return monthly_payment
-    
+     
     '''
     Accessor method to return the loan amount. 
     '''
     @property
     def loan_amount(self): 
         return self.__loan_amount
-    
+     
     '''
     Accessor method to return the number of years of the loan. 
     '''
     @property
     def years(self): 
         return self.__years
-    
+     
     '''
     Accessor method to return the interest rate of the loan. 
     '''
     @property
     def interest_rate(self): 
         return self.__interest_rate
-    
+     
     '''
     Accessor method to return the monthly payment. 
     '''
     @property
     def monthly_payment(self): 
         return self.__monthly_payment
-    
+     
     '''
     Accessor method to return the number of months remaining 
     '''
     @property
     def months_remaining(self): 
         return self.__months_remaining
-    
+     
     '''
     Accessor method to return the remaining balance.
     '''
     @property
     def remaining_balance(self): 
         return self.__remaining_balance
-    
+     
     '''
     Processes a payment towards the loan. The amount must be at least the monthly payment and cannot exceed the remaining balance. If the remaining balance is zeroed after the payment, months_remaining should be zeroed as well. 
     '''
